@@ -1,3 +1,13 @@
+---
+title: VigiLens
+emoji: 🚦
+colorFrom: blue
+colorTo: red
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
 # VigiLens: Real-Time Traffic Violation Vision Pipeline
 
 ![VigiLens Architecture](https://img.shields.io/badge/Architecture-Modular-blue.svg) ![Python 3.10+](https://img.shields.io/badge/python-3.10+-green.svg) ![YOLO11](https://img.shields.io/badge/YOLO-11-yellow.svg)
