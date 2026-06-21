@@ -95,9 +95,10 @@ streamlit run app.py
 4. Set your contextual Area Profiles (e.g., Highway vs. School Zone limits).
 
 ### Step 3: Run the Pipeline
-1. Upload a video feed or connect your RTSP stream.
-2. The `main_pipeline.py` will automatically route frames through Phase 1-4.
-3. Switch to the **Human Review** tab to view flagged violations. Here, you can examine the cropped evidence, the OCR read, and the bounding box logic before choosing to **Approve** or **Reject** the ticket.
+1. In the sidebar, ensure the **OCR Mode** is set to `auto` (this mode automatically prioritizes Gemini's highly accurate online API, and only falls back to local EasyOCR if needed).
+2. Make sure the **Use SmartPreprocessor** checkbox is checked. This ensures the license plates are geometrically aligned and contrast-enhanced before being sent to the OCR engine.
+3. Upload a traffic image or connect your RTSP stream.
+4. Switch to the **Human Review** tab to view flagged violations. Here, you can examine the cropped evidence, the OCR read, and the bounding box logic before choosing to **Approve** or **Reject** the ticket.
 
 ---
 
