@@ -51,21 +51,30 @@ Automated traffic systems frequently fail in the real world due to bad weather, 
 
 We recommend using [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or Anaconda to isolate the project environment.
 
-### 1. Create a Conda Environment
+### 1. Clone the Repository (with Git LFS)
+Because the heavy YOLO and OCR models are stored using Git Large File Storage (LFS), you must ensure Git LFS is installed and then pull the models after cloning so they are placed correctly into the `models/` directory.
+```bash
+git clone https://github.com/HarshLk/vigilens_gridlock.git
+cd vigilens_gridlock
+git lfs install
+git lfs pull
+```
+
+### 2. Create a Conda Environment
 Open your terminal and create a fresh Python 3.10 environment:
 ```bash
 conda create -n vigilens python=3.10 -y
 conda activate vigilens
 ```
 
-### 2. Install PyTorch
+### 3. Install PyTorch
 Install PyTorch with CUDA support (recommended for GPU acceleration) or CPU. Refer to the [PyTorch website](https://pytorch.org/get-started/locally/) for your specific system constraints.
 ```bash
 # Example for CUDA 11.8
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 The system relies on Ultralytics (YOLO), OpenCV, Streamlit, and multiple OCR engines. Install them via pip:
 ```bash
 pip install ultralytics opencv-python streamlit
